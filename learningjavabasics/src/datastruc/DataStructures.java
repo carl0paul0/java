@@ -3,6 +3,7 @@ package datastruc;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -11,7 +12,21 @@ public class DataStructures {
 	
 	private List<String> strList;
 	private Map<String,String> strMap;
+	private Hashtable <String, Integer> ht;
 	private Set <String> st;
+	
+	public void setHt() {
+		/*
+		 * Similar to HashMap but syncronized. Hashtable does not
+		 * allow nulls.
+		 */
+		ht = new Hashtable<>();
+		ht.put("Carlo", 77);
+		/*
+		 * Adding null will cause a null pointer exception
+		 */
+		//ht.put(null, 01);
+	}
 	
 	public void setST() {
 		/*
@@ -28,6 +43,7 @@ public class DataStructures {
 		 * but it will not be added.
 		 */
 		st.add("Carlo");
+		st.add(null);
 		
 	}
 	
@@ -55,6 +71,7 @@ public class DataStructures {
 		strMap.put("Paulo", "Best");
 		strMap.put("Oroc", "Ever");
 		strMap.put("Tolentino", "Always");
+		strMap.put(null,"Test");
 	}
 
 	public static void main(String[] args) {
@@ -62,12 +79,17 @@ public class DataStructures {
 		dS.setStrList();
 		dS.setStrMap();
 		dS.setST();
+		dS.setHt();
 		System.out.println("ArrayList:"+dS.getStrList().toString());
 		System.out.println("HashMap:"+dS.getStrMap().toString());
 		/*
 		 * Printing the Set will show only one "Carlo".
 		 */
 		System.out.println("HasSet:"+dS.getSt().toString());
+		/*
+		 * Hashtable almost same as HashMap but syncronized and does not allow nulls.
+		 */
+		System.out.println("Hastable:"+dS.getHt().toString());
 
 	}
 
@@ -82,4 +104,7 @@ public class DataStructures {
 		return st;
 	}
 
+	public Hashtable <String, Integer> getHt() {
+		return ht;
+	}
 }
