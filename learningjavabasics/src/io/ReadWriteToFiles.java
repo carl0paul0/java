@@ -18,7 +18,7 @@ public class ReadWriteToFiles {
 		System.out.println("Write To File via Stream Begin");
 		FileOutputStream fStr = null;
 		String bytesStr = "hello there my people||==++";
-		byte [] buffer = bytesStr.getBytes();
+		byte [] buffer = bytesStr.getBytes(); // need to convert to bytes
 		try {
 			fStr = new FileOutputStream(fileName2);
 			fStr.write(buffer);
