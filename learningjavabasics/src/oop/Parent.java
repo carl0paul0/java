@@ -10,7 +10,7 @@ public class Parent {
 	/*Parent(){
 		//if you do not have a default constructor you need to do the 
 		// super(x) sample. at least one default constructor needed if you
-		// do not want to write a specific constructor in the child class
+		// do not want to write a specific constructor in the child class.
 	}*/
 	
 	Parent(int x){
