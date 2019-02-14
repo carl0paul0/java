@@ -8,6 +8,9 @@ package oop;
  */
 public class Child extends Parent{
 	
+	Child(int x) {
+		super(x);
+	}
 	/*
 	 * You cannot override a final method from the super class.
 	 */
