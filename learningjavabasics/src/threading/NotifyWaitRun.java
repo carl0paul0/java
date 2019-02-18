@@ -3,6 +3,8 @@ package threading;
 public class NotifyWaitRun {
 
 	/* must have a shared object monitor for this to work.
+	 * Using different object monitor will result to the wait threads 
+	 * waiting forever (deadlocks).
 	 * 
 	 */
 	public static void main(String[] args) {
