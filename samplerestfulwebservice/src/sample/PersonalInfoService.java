@@ -10,13 +10,13 @@ import javax.ws.rs.Produces;
 @Path("/person")
 public class PersonalInfoService {
 	SampleDao sD = new SampleDao();
-	
+	//http://<host:port>/samplerestfulwebservice/rest/person/getperson
 	@GET
 	@Path("/getperson")
 	public List<PersonalInfo> getInfo(){
 		return sD.getInfo();
 	}
-	
+	//http://<host:port>/samplerestfulwebservice/rest/person/getjson
 	@GET
 	@Path("/getjson")
 	@Produces("application/json")
